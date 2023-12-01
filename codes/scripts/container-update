@@ -1,0 +1,17 @@
+#!/bin/bash
+
+
+opt=$1
+
+for i in $( ls ./container );
+do
+  if [ -d "./container/$i/" ]; then
+    if [ $opt == "--repo" ]; then
+    	cd "./container/$i/" && python3 -m main update && cd ../../
+    elif [ $opt == "--data" ]; then
+        cd "./container/$i/" && python3 getdata.py && cd ../../
+    fi
+    clear
+  fi
+done
+

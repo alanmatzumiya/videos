@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>    
+    {% include head %}
+    <link rel="stylesheet" href="{{ css }}/404.css">
+    <title>{{ title }}</title>
+</head>
+<body class="w3-black">
+
+{% include navigator %}
+
+<div class="w3-padding-large" id="main">    
+    
+    <header class="w3-container w3-padding-32 w3-center">
+        
+        <h1 class="w3-jumbo"><span class="w3-hide-small">404</span></h1>
+            <p>
+                {{ error_message }}
+            </p>
+            <a href="/" class="w3-button w3-black w3-padding-large w3-hover-white">Back Home</a>
+        <section id="solar-system">
+            <div id="sun"></div>
+            <article id="mercury-trajectory">
+                <div id="mercury"></div>
+            </article>
+            <article id="venus-trajectory">
+                <div id="venus"></div>
+            </article>
+            <article id="earth-trajectory">
+                <div id="earth"></div>
+            </article>
+            <article id="mars-trajectory">
+                <div id="mars"></div>
+            </article>
+        </section>
+    </header>
+</div>    
+{% include footer %}
+</body>
+</html>
